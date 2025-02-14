@@ -56,41 +56,40 @@ document.addEventListener("DOMContentLoaded", function () {
           "Universal Healthcare", "Urban Farming", "Violence in Media",   
           "Voter ID Laws", "Wildfire Prevention", "Women in STEM",   
           "Workplace Diversity", "Youth Unemployment", "Zero Waste"
-    ];
+  ];
 
-    const generateBtn = document.getElementById("generateBtn");
-    const topicDisplay = document.getElementById("topicDisplay");
-    const timerMessage = document.getElementById("timerMessage");
+  const generateBtn = document.getElementById("generateBtn");
+  const topicDisplay = document.getElementById("topicDisplay");
+  const timerMessage = document.getElementById("timerMessage");
 
-    let canClick = true;
+  let canClick = true;
 
-    generateBtn.addEventListener("click", function () {
-        if (!canClick) {
-            timerMessage.textContent = "Even if you don't like this topic, practice anyways! You won't be able to switch up your topic on stage 😉";
-            return;
-        }
+  generateBtn.addEventListener("click", function () {
+    if (!canClick) {
+      timerMessage.textContent = "Even if you don't like this topic, practice anyways! You won't be able to switch up your topic on stage 😉";
+      return;
+    }
 
-        // Generate a random topic
-        const randomIndex = Math.floor(Math.random() * topics.length);
-        topicDisplay.textContent = "Your topic: " + topics[randomIndex];
+    // Generate a random topic
+    const randomIndex = Math.floor(Math.random() * topics.length);
+    topicDisplay.textContent = "Your topic: " + topics[randomIndex];
 
-        // Disable button for 30 seconds
-        canClick = false;
-        generateBtn.disabled = true;
-        let timeLeft = 30;
+    // Disable button for 30 seconds
+    canClick = false;
+    generateBtn.disabled = true;
+    let timeLeft = 30;
 
-        const countdown = setInterval(function () {
-            generateBtn.textContent = `Wait ${timeLeft}s`;
-            timeLeft--;
+    const countdown = setInterval(function () {
+      generateBtn.textContent = `Wait ${timeLeft}s`;
+      timeLeft--;
 
-            if (timeLeft < 0) {
-                clearInterval(countdown);
-                generateBtn.textContent = "Generate Topic";
-                generateBtn.disabled = false;
-                canClick = true;
-                timerMessage.textContent = "";
-            }
-        }, 1000);
-    });
+      if (timeLeft < 0) {
+        clearInterval(countdown);
+        generateBtn.textContent = "Generate Topic";
+        generateBtn.disabled = false;
+        canClick = true;
+        timerMessage.textContent = "";
+      }
+    }, 1000);
+  });
 });
-
