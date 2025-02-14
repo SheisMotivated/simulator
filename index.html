@@ -1,21 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SheisMotivated's Exclusive Hot Topics Practice Simulator</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>SheisMotivated's Exclusive Hot Topics Practice Simulator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Open Graph (OG) Tags -->
+  <meta property="og:title" content="SheisMotivated's Exclusive Hot Topics Practice Simulator" />
+  <meta property="og:description" content="Practice your random topics for on-stage Q&A." />
+  <meta property="og:image" content="https://example.com/path-to-your-image.jpg" />
+  <meta property="og:url" content="https://sheismotivated.github.io/simulator/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SheisMotivated's Exclusive Hot Topics Practice Simulator" />
+  <meta name="twitter:description" content="Practice your random topics for on-stage Q&A." />
+  <meta name="twitter:image" content="https://example.com/path-to-your-image.jpg" />
+
+  <!-- (Optional) OEmbed Link - if you create a separate oembed.json file -->
+ <link rel="alternate" type="application/json+oembed" href="https://sheismotivated.github.io/simulator/oembed.json" title="Hot Topics Simulator" />
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>SheisMotivated's Exclusive Hot Topics Practice Simulator</h1>
-        <button id="generateBtn">Generate Topic</button>
-        <p id="topicDisplay">Click the button to generate a topic.</p>
-        <p id="timerMessage" class="hidden"></p>
-    </div>
+  <div class="container">
+    <h1>SheisMotivated's Exclusive Hot Topics Practice Simulator</h1>
+    <button id="generateBtn">Generate Topic</button>
+    <p id="topicDisplay">Click the button to generate a topic.</p>
+    <p id="timerMessage" class="hidden"></p>
+  </div>
 
-    <script src="script.js" defer></script>
-
+  <script src="script.js" defer></script>
 </body>
 </html>
